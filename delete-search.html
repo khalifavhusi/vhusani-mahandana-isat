@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       DOCUMENT HEAD
+       Contains page metadata, title, viewport and stylesheet.
+       ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete / Search | Vision of Love</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- =========================================================
+       PAGE BODY
+       Contains the visible content of this page.
+       ========================================================= -->
+  <!-- =========================================================
+       HEADER
+       Contains the logo, website name and menu button.
+       ========================================================= -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpeg" alt="Vision of Love logo">
+      <span><strong>Vision of Love</strong><small>Charity System</small></span>
+    </a>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- =========================================================
+         NAVIGATION MENU
+         Opens from the three-dash menu button.
+         ========================================================= -->
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <!-- Distribution / Family Records -->
+      <a href="family-records.html">Distribution / Family Records</a>
+      <!-- Delete / Search -->
+      <a href="delete-search.html">Delete / Search</a>
+      <!-- Package Allocation -->
+      <a href="package-allocation.html">Package Allocation</a>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       DELETE / SEARCH CONTENT
+       Contains the Family ID search and record actions.
+       ========================================================= -->
+  <main class="page-shell">
+    <!-- =========================================================
+         SEARCH SECTION
+         Searches for a family record by Family ID.
+         ========================================================= -->
+    <section class="search-panel">
+      <h2>Search Record</h2>
+      <div class="search-row">
+        <label>Search by Family ID<input id="searchId" placeholder="Enter Family ID"></label>
+        <button class="button" id="searchButton" type="button">Search</button>
+        <button class="button" id="displaySearch" type="button">Display</button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         RECORD FOUND SECTION
+         Displays the family record returned by the search.
+         ========================================================= -->
+    <section class="record-panel">
+      <div class="record-details">
+        <h2>Record Found</h2>
+        <dl>
+          <div><dt>Family ID</dt><dd id="foundFamilyId">-</dd></div>
+          <div><dt>Name</dt><dd id="foundName">-</dd></div>
+          <div><dt>Surname</dt><dd id="foundSurname">-</dd></div>
+          <div><dt>Members</dt><dd id="foundMembers">-</dd></div>
+          <div><dt>Package</dt><dd id="foundPackage">-</dd></div>
+          <div><dt>Email</dt><dd id="foundEmail">-</dd></div>
+          <div><dt>Telephone</dt><dd id="foundTelephone">-</dd></div>
+          <div><dt>Collection Date</dt><dd id="foundDate">-</dd></div>
+        </dl>
+      </div>
+      <!-- =======================================================
+           ACTIONS
+           Contains Delete and Clear buttons.
+           ======================================================= -->
+      <aside class="actions">
+        <h2>Actions</h2>
+        <button class="button action-button" id="deleteButton" type="button">▣ &nbsp; Delete</button>
+        <button class="button action-button" id="clearSearch" type="button">↻ &nbsp; Clear</button>
+      </aside>
+    </section>
+
+    <section class="table-panel">
+      <h2>Display Family Records</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Family ID</th><th>Name</th><th>Surname</th><th>Members</th><th>Package</th><th>Collection Date</th></tr></thead>
+          <tbody id="searchTable"><tr><td colspan="6">No records to display</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <!-- =========================================================
+       PAGE JAVASCRIPT
+       Loads the JavaScript file responsible for this page.
+       ========================================================= -->
+  <script src="js/main.js"></script>
+  <script src="js/delete-search.js"></script>
+</body>
+</html>

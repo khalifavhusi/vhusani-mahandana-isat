@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       DOCUMENT HEAD
+       Contains page metadata, title, viewport and stylesheet.
+       ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Records | Vision of Love</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- =========================================================
+       PAGE BODY
+       Contains the visible content of this page.
+       ========================================================= -->
+  <!-- =========================================================
+       HEADER
+       Contains the logo, website name and menu button.
+       ========================================================= -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpeg" alt="Vision of Love logo">
+      <span><strong>Vision of Love</strong><small>Charity System</small></span>
+    </a>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- =========================================================
+         NAVIGATION MENU
+         Opens from the three-dash menu button.
+         ========================================================= -->
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <!-- Distribution / Family Records -->
+      <a href="family-records.html">Distribution / Family Records</a>
+      <!-- Delete / Search -->
+      <a href="delete-search.html">Delete / Search</a>
+      <!-- Package Allocation -->
+      <a href="package-allocation.html">Package Allocation</a>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       FAMILY RECORDS CONTENT
+       Contains the family information form and records table.
+       ========================================================= -->
+  <main class="page-shell">
+    <!-- =========================================================
+         FAMILY INFORMATION FORM
+         Collects the family details used by the system.
+         ========================================================= -->
+    <section class="form-panel">
+      <!-- Family information fields -->
+      <div class="panel-main">
+        <h2>Family Information</h2>
+        <form id="familyForm">
+          <label>Family ID<input id="familyId" required readonly placeholder="Automatically generated"></label>
+          <label>Name<input id="name" required placeholder="Enter Name"></label>
+          <label>Surname<input id="surname" required placeholder="Enter Surname"></label>
+          <label>Number of Family Members<input id="members" type="number" min="1" required placeholder="Enter Number"></label>
+          <label>Email<input id="email" type="email" placeholder="Enter Email"></label>
+          <label>Telephone<input id="telephone" placeholder="Enter Telephone"></label>
+          <label>Package<select id="package" required><option value="">Select Package</option><option value="Package 1">Package 1</option><option value="Package 2">Package 2</option><option value="Package 3">Package 3</option></select></label>
+          <label>Collection Date<input id="collectionDate" type="date" required></label>
+        </form>
+      </div>
+
+      <!-- =======================================================
+           ACTIONS
+           Contains Insert / Save, Update and Clear buttons.
+           ======================================================= -->
+      <aside class="actions">
+        <h2>Actions</h2>
+        <button class="button action-button" form="familyForm" type="submit">▣ &nbsp; Insert / Save</button>
+        <button class="button action-button" id="updateFamily" type="button">✎ &nbsp; Update</button>
+        <button class="button action-button" id="displayFamily" type="button">▤ &nbsp; Display</button>
+        <button class="button action-button" id="clearFamily" type="button">↻ &nbsp; Clear</button>
+      </aside>
+    </section>
+
+    <!-- =========================================================
+         FAMILY RECORDS TABLE
+         Displays the saved family records.
+         ========================================================= -->
+    <section class="table-panel">
+      <h2>Display Family Records</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Family ID</th><th>Name</th><th>Surname</th><th>Members</th><th>Package</th><th>Collection Date</th></tr></thead>
+          <tbody id="familyTable"><tr><td colspan="6">No records to display</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <!-- =========================================================
+       PAGE JAVASCRIPT
+       Loads the JavaScript file responsible for this page.
+       ========================================================= -->
+  <script src="js/main.js"></script>
+  <script src="js/family-records.js"></script>
+</body>
+</html>

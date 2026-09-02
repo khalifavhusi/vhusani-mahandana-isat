@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       DOCUMENT HEAD
+       Contains page metadata, title, viewport and stylesheet.
+       ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision of Love | Charity System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- =========================================================
+       PAGE BODY
+       Contains the visible content of this page.
+       ========================================================= -->
+  <!-- =========================================================
+       HEADER
+       Contains the logo, website name and menu button.
+       ========================================================= -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpeg" alt="Vision of Love logo">
+      <span><strong>Vision of Love</strong><small>Charity System</small></span>
+    </a>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- =========================================================
+         NAVIGATION MENU
+         Opens from the three-dash menu button.
+         ========================================================= -->
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <!-- Distribution / Family Records -->
+      <a href="family-records.html">Distribution / Family Records</a>
+      <!-- Delete / Search -->
+      <a href="delete-search.html">Delete / Search</a>
+      <!-- Package Allocation -->
+      <a href="package-allocation.html">Package Allocation</a>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       HOME PAGE CONTENT
+       Contains the hero section and the three requested page cards.
+       ========================================================= -->
+  <main>
+    <!-- =========================================================
+         HERO SECTION
+         Displays the supplied hero image and supplied message.
+         ========================================================= -->
+    <section class="hero">
+      <img src="images/hero.jpeg" alt="">
+      <div class="hero-content">
+        <h1>Making a Difference,<br>One Family at a Time</h1>
+        <p>Helping communities by managing and distributing food packages to families in need.</p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         PAGE NAVIGATION CARDS
+         Contains only Family Records, Delete / Search and
+         Package Allocation.
+         ========================================================= -->
+    <section class="page-cards">
+      <!-- Distribution / Family Records card -->
+      <!-- Delete / Search card -->
+      <!-- Package Allocation card -->
+      <article class="page-card">
+        <h2>Distribution /<br>Family Records</h2>
+        <p>Manage and distribute food packages to families.</p>
+        <a class="button" href="family-records.html">Go to Page <span>→</span></a>
+      </article>
+
+      <article class="page-card">
+        <h2>Delete / Search</h2>
+        <p>Search for records and delete if needed.</p>
+        <a class="button" href="delete-search.html">Go to Page <span>→</span></a>
+      </article>
+
+      <article class="page-card">
+        <h2>Package Allocation</h2>
+        <p>Allocate and manage packages efficiently.</p>
+        <a class="button" href="package-allocation.html">Go to Page <span>→</span></a>
+      </article>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       PAGE JAVASCRIPT
+       Loads the JavaScript file responsible for this page.
+       ========================================================= -->
+  <script src="js/main.js"></script>
+</body>
+</html>

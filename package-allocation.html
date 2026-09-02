@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- =========================================================
+       DOCUMENT HEAD
+       Contains page metadata, title, viewport and stylesheet.
+       ========================================================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Package Allocation | Vision of Love</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- =========================================================
+       PAGE BODY
+       Contains the visible content of this page.
+       ========================================================= -->
+  <!-- =========================================================
+       HEADER
+       Contains the logo, website name and menu button.
+       ========================================================= -->
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="images/logo.jpeg" alt="Vision of Love logo">
+      <span><strong>Vision of Love</strong><small>Charity System</small></span>
+    </a>
+    <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- =========================================================
+         NAVIGATION MENU
+         Opens from the three-dash menu button.
+         ========================================================= -->
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <!-- Distribution / Family Records -->
+      <a href="family-records.html">Distribution / Family Records</a>
+      <!-- Delete / Search -->
+      <a href="delete-search.html">Delete / Search</a>
+      <!-- Package Allocation -->
+      <a href="package-allocation.html">Package Allocation</a>
+    </nav>
+  </header>
+
+  <!-- =========================================================
+       PACKAGE ALLOCATION CONTENT
+       Contains the package information form and packages table.
+       ========================================================= -->
+  <main class="page-shell">
+    <!-- =========================================================
+         PACKAGE INFORMATION FORM
+         Collects package ID, name, type, quantity and status.
+         ========================================================= -->
+    <section class="form-panel package-panel">
+      <div class="panel-main">
+        <h2>Package Information</h2>
+        <form id="packageForm">
+          <label>Package ID<input id="packageId" required placeholder="Enter Package ID"></label>
+          <label>Package Name<input id="packageName" required placeholder="Enter Package Name"></label>
+          <label>Package Type<select id="packageType" required><option value="">Select Type</option><option value="Food parcel">Food parcel</option><option value="packages">packages</option><option value="bulk Relief Package">bulk Relief Package</option></select></label>
+          <label>Quantity<input id="quantity" type="number" min="1" required placeholder="Enter Quantity"></label>
+          <label>Status<select id="status" required><option value="">Select Status</option><option value="pending">pending</option><option value="received">received</option><option value="Available">Available</option><option value="collected">collected</option><option value="allocated">allocated</option></select></label>
+        </form>
+      </div>
+
+      <!-- =======================================================
+           ACTIONS
+           Contains Save, Update, Delete and Clear buttons.
+           ======================================================= -->
+      <aside class="actions">
+        <h2>Actions</h2>
+        <button class="button action-button" form="packageForm" type="submit">▣ &nbsp; Save</button>
+        <button class="button action-button" id="updatePackage" type="button">✎ &nbsp; Update</button>
+        <button class="button action-button" id="deletePackage" type="button">▣ &nbsp; Delete</button>
+        <button class="button action-button" id="displayPackage" type="button">▤ &nbsp; Display</button>
+        <button class="button action-button" id="clearPackage" type="button">↻ &nbsp; Clear</button>
+      </aside>
+    </section>
+
+    <!-- =========================================================
+         PACKAGES TABLE
+         Displays the saved package records.
+         ========================================================= -->
+    <section class="table-panel">
+      <h2>Display Packages</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Package ID</th><th>Package Name</th><th>Type</th><th>Quantity</th><th>Status</th></tr></thead>
+          <tbody id="packageTable"><tr><td colspan="5">No records to display</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <!-- =========================================================
+       PAGE JAVASCRIPT
+       Loads the JavaScript file responsible for this page.
+       ========================================================= -->
+  <script src="js/main.js"></script>
+  <script src="js/package-allocation.js"></script>
+</body>
+</html>

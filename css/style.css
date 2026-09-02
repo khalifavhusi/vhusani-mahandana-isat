@@ -1,0 +1,247 @@
+/* =========================================================
+   GLOBAL / BASE STYLES
+   Basic styling shared by the entire website.
+   ========================================================= */
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111}
+body{min-height:100vh}
+/* =========================================================
+   HEADER
+   Styles the website header, logo area and menu area.
+   ========================================================= */
+
+.site-header{height:90px;border:1px solid #222;border-top:0;display:flex;align-items:center;justify-content:space-between;padding:0 38px;background:#fff}
+/* =========================================================
+   BRAND / LOGO / WEBSITE NAME
+   Styles the supplied logo and website name.
+   ========================================================= */
+
+.brand{display:flex;align-items:center;gap:16px;text-decoration:none;color:#111}
+.brand img{width:52px;height:52px;object-fit:cover;border-radius:0}
+.brand span{display:flex;flex-direction:column;line-height:1.1}
+.brand strong{font-size:20px;font-weight:700}
+.brand small{font-size:13px;margin-top:5px}
+/* =========================================================
+   MENU BUTTON
+   Styles the three-line menu button in the header.
+   ========================================================= */
+
+.menu-button{width:44px;height:44px;border:0;background:#fff;display:flex;flex-direction:column;justify-content:center;gap:6px;align-items:center;cursor:pointer;border-radius:0}
+.menu-button span{display:block;width:25px;height:2px;background:#111}
+
+/* =========================================================
+   HOME PAGE HERO
+   Styles the supplied main image area.
+   ========================================================= */
+
+.hero{position:relative;height:475px;overflow:hidden;border-left:1px solid #222;border-right:1px solid #222}
+.hero>img{width:100%;height:100%;object-fit:cover;display:block}
+/* =========================================================
+   HERO OVERLAY
+   Provides the overlay used behind the hero text.
+   ========================================================= */
+
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.12) 65%,rgba(0,0,0,.15))}
+/* =========================================================
+   HERO TEXT
+   Styles the supplied heading and message.
+   ========================================================= */
+
+.hero-content{position:absolute;z-index:1;left:8.5%;top:50%;transform:translateY(-50%);max-width:570px;color:#fff}
+.hero-content h1{font-size:46px;line-height:1.15;margin:0 0 24px;font-weight:700}
+.hero-content p{font-size:21px;line-height:1.55;margin:0;max-width:520px}
+
+/* =========================================================
+   HOME PAGE CARDS
+   Styles the three requested navigation cards.
+   ========================================================= */
+
+.page-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;padding:32px 44px 48px;border:1px solid #222;border-top:0}
+/* =========================================================
+   INDIVIDUAL PAGE CARD
+   Styles each card and its square-corner border.
+   ========================================================= */
+
+.page-card{min-height:340px;border:1px solid #aaa;padding:34px 28px 28px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.page-card h2{font-size:27px;line-height:1.25;margin:0 0 30px}
+.page-card p{font-size:18px;line-height:1.5;margin:0;max-width:300px}
+/* =========================================================
+   BUTTONS
+   Styles all buttons. Buttons are the only elements with
+   rounded corners.
+   ========================================================= */
+
+.button{border:1px solid #111;background:#e7e7e7;color:#111;border-radius:9px;padding:12px 24px;font:600 15px Arial;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:42px}
+.button:hover{background:#d8d8d8}
+/* =========================================================
+   CARD BUTTONS
+   Styles the Go to Page buttons inside the cards.
+   ========================================================= */
+
+.page-card .button{margin-top:auto;min-width:230px}
+.page-card .button span{font-size:22px;margin-left:12px;font-weight:400}
+
+/* =========================================================
+   INTERNAL PAGE CONTAINER
+   Provides the main spacing area for internal pages.
+   ========================================================= */
+
+.page-shell{padding:0 0 40px}
+/* =========================================================
+   FORM PANELS
+   Styles the Family Records and Package Allocation forms.
+   ========================================================= */
+
+.form-panel,.search-panel,.record-panel,/* =========================================================
+   TABLE PANEL
+   Styles the records/packages display section.
+   ========================================================= */
+
+.table-panel{border:1px solid #222;background:#fff}
+.form-panel{margin:0;display:grid;grid-template-columns:1fr 250px;min-height:300px}
+/* =========================================================
+   FORM CONTENT AREA
+   Provides spacing for the main form content.
+   ========================================================= */
+
+.panel-main{padding:22px 28px}
+.panel-main h2,.search-panel h2,.record-panel h2,.table-panel h2{font-size:15px;margin:0 0 20px}
+/* =========================================================
+   FORM LAYOUT
+   Arranges form fields vertically.
+   ========================================================= */
+
+form{display:grid;gap:9px}
+/* =========================================================
+   FORM LABELS
+   Positions field labels and their controls.
+   ========================================================= */
+
+label{font-size:13px;font-weight:600;display:grid;grid-template-columns:190px 1fr;align-items:center;gap:15px}
+/* =========================================================
+   INPUTS AND SELECT BOXES
+   Styles text fields, number fields, dates and dropdowns.
+   These elements have square corners.
+   ========================================================= */
+
+input,select{height:31px;border:1px solid #555;border-radius:0;background:#fff;padding:5px 9px;font:13px Arial;color:#111}
+/* =========================================================
+   ACTIONS PANEL
+   Styles the area containing page action buttons.
+   ========================================================= */
+
+.actions{border-left:1px solid #222;padding:22px 20px;display:flex;flex-direction:column;align-items:stretch;gap:11px}
+.actions h2{margin-bottom:2px}
+/* =========================================================
+   ACTION BUTTONS
+   Styles Save, Update, Delete and Clear buttons.
+   ========================================================= */
+
+.action-button{width:100%}
+.table-panel{margin-top:0;padding:12px 18px 18px}
+.table-panel h2{padding:0 0 8px;margin:0}
+/* =========================================================
+   TABLE WRAPPER
+   Styles the border and scrolling area around tables.
+   ========================================================= */
+
+.table-wrap{border:1px solid #aaa;overflow:auto}
+/* =========================================================
+   TABLES
+   Styles the Family Records and Packages tables.
+   ========================================================= */
+
+table{border-collapse:collapse;width:100%;font-size:12px}
+th,td{border-right:1px solid #bbb;border-bottom:1px solid #bbb;padding:9px;text-align:center;font-weight:400}
+th{font-weight:600;background:#f5f5f5}
+th:last-child,td:last-child{border-right:0}
+
+/* =========================================================
+   SEARCH PANEL
+   Styles the Delete / Search input area.
+   ========================================================= */
+
+.search-panel{padding:20px 32px}
+/* =========================================================
+   SEARCH ROW
+   Arranges the search field and Search button.
+   ========================================================= */
+
+.search-row{display:grid;grid-template-columns:1fr 90px;gap:20px;align-items:end}
+.search-row label{grid-template-columns:130px 1fr}
+/* =========================================================
+   RECORD FOUND PANEL
+   Styles the found family record and its actions.
+   ========================================================= */
+
+.record-panel{display:grid;grid-template-columns:1fr 250px;min-height:265px}
+/* =========================================================
+   RECORD DETAILS
+   Styles the displayed family information.
+   ========================================================= */
+
+.record-details{padding:20px 30px}
+.record-details dl{margin:0;display:grid;gap:12px}
+.record-details dl div{display:grid;grid-template-columns:125px 1fr;font-size:13px}
+.record-details dt{font-weight:600}
+.record-details dd{margin:0}
+
+/* =========================================================
+   PACKAGE ALLOCATION
+   Styles the package information panel.
+   ========================================================= */
+
+.package-panel{min-height:260px}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   Adjusts the website layout for smaller screens.
+   ========================================================= */
+
+@media(max-width:800px){
+ .site-header{padding:0 18px}
+ .hero{height:420px}
+ .hero-content{left:7%;right:7%}
+ .hero-content h1{font-size:34px}
+ .hero-content p{font-size:17px}
+ .page-cards{grid-template-columns:1fr;padding:20px}
+ .form-panel,.record-panel{grid-template-columns:1fr}
+ .actions{border-left:0;border-top:1px solid #222}
+ label{grid-template-columns:1fr}
+ .search-row{grid-template-columns:1fr}
+}
+
+
+/* =========================================================
+   NAVIGATION MENU
+   Hidden until the three-dash menu button is clicked.
+   ========================================================= */
+.site-header{position:relative}
+.site-nav{position:absolute;top:90px;right:38px;width:260px;display:none;flex-direction:column;background:#fff;border:1px solid #222;z-index:1000;border-radius:0}
+
+/* =========================================================
+   OPEN NAVIGATION MENU
+   JavaScript adds this class when the menu is opened.
+   ========================================================= */
+.site-nav.is-open{display:flex}
+
+/* =========================================================
+   NAVIGATION LINKS
+   Square menu items for the three website pages.
+   ========================================================= */
+.site-nav a{display:block;padding:15px 16px;color:#111;background:#fff;text-decoration:none;border-bottom:1px solid #aaa;border-radius:0}
+.site-nav a:last-child{border-bottom:0}
+.site-nav a:hover{background:#e7e7e7}
+
+/* =========================================================
+   MOBILE NAVIGATION
+   Makes the menu fit smaller screens.
+   ========================================================= */
+@media (max-width:700px){.site-nav{left:15px;right:15px;width:auto}}
+/* =========================================================
+   SELECTABLE DISPLAYED RECORDS
+   A displayed row can be selected to load its information.
+   ========================================================= */
+.selectable-row{cursor:pointer}
+.selectable-row:hover{background:#eeeeee}
