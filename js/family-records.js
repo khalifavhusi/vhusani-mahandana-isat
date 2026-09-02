@@ -47,6 +47,6 @@ document.getElementById("updateFamily").addEventListener("click",()=>{
   const rows=getFamilies(), i=rows.findIndex(x=>x.familyId===selectedFamilyId); if(i<0){alert("Record not found.");return;}
   const r=readFamily(); r.familyId=selectedFamilyId; rows[i]=r; saveFamilies(rows); renderFamilies(); clearFamilyForm(); alert("Record updated successfully.");
 });
-document.getElementById("displayFamily").addEventListener("click",renderFamilies);
-document.getElementById("clearFamily").addEventListener("click",clearFamilyForm);
-setNewFamilyId(); renderFamilies();
+document.getElementById("displayFamily").addEventListener("click",()=>{document.querySelector(".table-panel").classList.remove("display-panel-hidden");renderFamilies();});
+document.getElementById("clearFamily").addEventListener("click",()=>{clearFamilyForm();document.querySelector(".table-panel").classList.add("display-panel-hidden");});
+setNewFamilyId();

@@ -245,3 +245,6 @@ th:last-child,td:last-child{border-right:0}
    ========================================================= */
 .selectable-row{cursor:pointer}
 .selectable-row:hover{background:#eeeeee}
+
+/* Hide display tables until the Display button is pressed. */
+.display-panel-hidden{display:none}
